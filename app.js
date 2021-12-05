@@ -149,5 +149,5 @@ app.get("/:customName", function (req, res) {
 
 
 app.listen(process.env.PORT || 3000, function () {
-    console.log("server running successfully");
+    console.log("server now running successfully");
 });
