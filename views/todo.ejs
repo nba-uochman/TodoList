@@ -1,0 +1,49 @@
+<%- include("partials/header") %>
+    <main class="container">
+        <div>
+            <a href="/about" target="_blank">About the developer</a>
+        </div>
+        <header>
+
+            <h1>
+                <%= listTitle %>
+            </h1>
+
+        </header>
+
+        <div class="item-container">
+            <% newItemList.forEach(list=> { %>
+                <div>
+                    <form action="/delete" method="post">
+                        <input type="checkbox" onchange="this.form.submit()" value="<%= list._id %>" name="check"
+                            class="check">
+                        <input type="hidden" name="listName" value="<%= listTitle %>"></input>
+                        <p>
+                            <%= list.name %>
+                        </p>
+                    </form>
+                </div>
+                <% }) %>
+
+
+                    <form action="/" method="post">
+                        <div class="text-container">
+                            <input type="text" name="inputField" class="text" placeholder="New item" required autofocus
+                                autocomplete="off">
+                            <button type="submit" name="button" value="<%= listTitle %>">+</button>
+                        </div>
+                    </form>
+
+        </div>
+
+
+        <%- include("partials/footer") %>
+            <!-- <footer>
+            <p>
+                <small>& Uche Patrick 2018</small>
+            </p>
+        </footer>
+    </main>
+</body>
+
+</html> -->
