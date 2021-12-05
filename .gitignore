@@ -3,3 +3,5 @@ npm-debug.log
 /*.env
 .vscode
 config.js
+Procfile
+package-lock.json
